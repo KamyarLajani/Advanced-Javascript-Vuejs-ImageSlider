@@ -11,6 +11,6 @@ Autoplaying and pausing it.
 
 Everything is dynamically created, you only need to add your images with/without programming language.
 
-
+[Demo](https://github.com/KamyarLajani/Advanced-Javascript-Vuejs-ImageSlider/master/images/demo.png)
 
 [Demo](https://codepen.io/KamyarLajani/pen/wvwWgbQ)  on Codepen.io 
