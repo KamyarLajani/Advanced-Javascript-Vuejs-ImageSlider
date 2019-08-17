@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Slider</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<div id="app">
+		<template>
+			<div class="container">
+				<span v-show="leftArrow" class="leftArrow" @click="previous()"><</span>
+				<div class="slider">
+					<div class="images" @mousedown="mouseDown($event)" @mousemove="mouseMove($event)" @mouseup="mouseUp($event)" @touchstart="mouseDown($event, 'touched')" @touchmove="mouseMove($event, 'touched')" @touchend="mouseUp($event)">
+						
+						<img src="https://i.ibb.co/42Y40GW/1.jpg" alt="Image" />
+						<img src="https://i.ibb.co/y04Y7Jt/2.jpg" alt="Image" />
+						<img src="https://i.ibb.co/wSrSTDb/Arby-Lipman-Elephant-Dustbath-MP-40-X60.jpg" alt="Image" />
+						<img src="https://i.ibb.co/VjJfPBL/Event91921416-Img.jpg" alt="Image" />
+						<img src="https://i.ibb.co/sq8tbsx/Jim-Corbett.jpg" alt="Image" />
+						
+					</div>
+					<img v-if="autoPlayed" @click="pause()" class="pause" img src="./images/pause.png" alt="pause" title="pause">
+					<img v-if="!autoPlayed" @click="autoPlay()" class="autoplay"img src="./images/play.png" alt="play" title="play">
+				</div>
+				<span v-show="rightArrow" class="rightArrow" @click="next()">></span>
+
+				<div class="circle">
+					<!-- circle buttons added here by javascript dynamically-->
+				</div>
+				
+			</div>
+		</template>
+	</div>
+	<script src="./app.js"></script>
+</body>
+</html>
